@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Yang Xiao</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/yangicon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121588664-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-121588664-1');
+    </script>
+</head>
+
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large w3-indigo">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium">Yang Xiao</a>
+        <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large">NSPL</a> -->
+        <a href="services.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="servicesredirect()">Service</a>
+        <a href="students.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="studentsredirect()">Students</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="teachingredirect()">Teaching</a>
+        <a href="projects.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="projectsredirect()">Projects</a>
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="publicationredirect()">Publication</a>
+    </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">    
+    <a href="publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-padding-large">Projects</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+    <a href="students.html" class="w3-bar-item w3-button w3-padding-large">Students</a>    
+    <a href="services.html" class="w3-bar-item w3-button w3-padding-large">Service</a>  
+  </div>
+</div>
+
+
+<div class="w3-content" style="max-width:1100px;margin-top:120px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+    <div class="w3-row-padding" id="front">
+        <div class="w3-third">
+    <!-- <div class="w3-card-4"> -->
+            <p class="pmargin">
+            <center>
+            <img class="w3-center" src="peoplepics/YangXiao.jpg" style="width:200px; height:200px; " align="middle">
+            </center>
+            </p>
+        <!-- </div> -->
+        </div>
+
+        <h2> <p class="pmargin w3-text-indigo"> Yang Xiao </p></h2>
+        <h5>
+            <p class="pmargin">
+            Assitant Professor (starting August 2022)
+            <br>Department of Computer Science, University of Kentucky
+            <br>Email: xiaoy[AT]vt[DOT]edu
+            <br><a href="https://scholar.google.com/citations?user=BiVROyUAAAAJ&hl=en" style="color:blue">Google Scholar</a>    
+            <a href="https://github.com/yang-sec" style="color:blue">GitHub</a>   
+            <a href="Curriculum_Vitae.pdf" style="color:blue">CV</a>
+        </h5>
+    </div>
+
+    <h3> <p class="pmargin w3-text-indigo"> About Me </p></h3>
+    <h6>
+        <p class="pmargin">
+        I will be starting an Assitant Professor position in the <a href="https://www.engr.uky.edu/research-faculty/departments/computer-science" style="color:blue">Department of Computer Science</a> at <a href="https://uky.edu/" style="color:blue">University of Kentucky</a> from August 2022. My research area is <em>Network and Information Security</em>. I am particularly interested in security and privacy issues in computer networks, distributed systems, blockchain and decentralized systems, and more recently next-G mobile networks. I enjoy analyzing the fundamental security and privacy challenges in these systems and developing novel solutions under the assumption of zero or limited trust.
+        I obtained my Ph.D. degree in Computer Engineering at Virginia Tech, advised by <a href="https://www.cnsr.ictas.vt.edu/WJLou.html" style="color:blue">Dr. Wenjing Lou</a>. I received my master's degree from University of Michigan in 2017 and bachelor's degree from Shanghai Jiao Tong University (SJTU) in 2014.
+    </h6>
+
+    <h3> <p class="pmargin w3-text-indigo"> News </p></h3>
+    <h6>
+        <p class="pmargin">
+        [May 2022] I have successfully defended my Ph.D. dissertation "Blockchain and Distributed Consensus: From Security Analysis to Novel Applications".
+        <br>[Apr 2022] Our paper  "CANShield: Signal-based Intrusion Detection for Controller Area Networks," is accepted by escar USA conference 2022.
+        <br>[Feb 2022] Our paper "FLARE: Defending Federated Learning against Model Poisoning Attacks via Latent Space Representations" is accepted by ASIACCS 2022.
+        <br>[Feb 2022] Our paper "MANDA: On Adversarial Example Detection for Network Intrusion Detection System" is accepted by IEEE TDSC.
+        <br>[Dec 2021] Our vision paper "Decentralized Spectrum Access System: Vision, Challenges, and a Blockchain Solution" is accepted by IEEE Wireless Communications.
+    </h6>
+</div>
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+    
+    function publicationredirect() {
+        location.replace("publication.html")
+    }
+
+    function projectsredirect() {
+        location.replace("projects.html")
+    }
+
+    function teachingredirect() {
+        location.replace("teaching.html")
+    }
+
+    function studentsredirect() {
+        location.replace("students.html")
+    }
+
+    function serviceredirect() {
+        location.replace("service.html")
+    }
+    
+</script>
+
+</body>
+</html>
