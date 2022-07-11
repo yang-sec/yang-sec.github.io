@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Yang Xiao - Automotive Network</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/yangicon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121588664-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-121588664-1');
+    </script>
+</head>
+
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large w3-indigo">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium">Yang Xiao</a>
+        <a href="service.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Service</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Members</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Teaching</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Research</a>
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Publication</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Home</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>    
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large">Research</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>    
+        <a href="service.html" class="w3-bar-item w3-button w3-padding-large">Service</a>  
+    </div>
+    
+</div>
+
+<div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+    <h3><p class="pmargin w3-center"><b>Automotive Network & Cyber-phyical Security</b></p></h3>
+
+    <hr>
+    <div class="w3-row">
+        <div class="w3-third">
+        <center>
+            <p class="pmargin">
+            <img class="w3-center" src="media/can-bus-testbed.png" style="width:300px; height:168px; " align="middle">
+            </p>
+        </center>
+        </div>
+
+        <div class="longColumn">
+            <h4><p class="pmargin w3-text-indigo">
+            Bootstrapping Secure Communication for CAN/CAN-FD Bus
+
+            </p></h4>
+            <h6><p class="pmargin">
+                Modern vehicles rely on a fleet of electronic control units (ECUs) connected through one or more automotive communication networks, such as the CAN/CAN-FD bus and the emergent automotive Ethernet, for real-time subsystem control. Originally developed for real-time onboard communication, these networks are heavily criticized for little-to-none security and the alarming susceptibility to intrusions. Eyeing on this security deficiency and recent standardization effort by AUTOSAR, we proposed a <a href="https://www.cnsr.ictas.vt.edu/publication/session-key-distribution-can-can-fd.pdf" style="color:red">session key establishment scheme for CAN/CAN-FD bus</a>, making innovative use of secret sharing, an efficient cryptographic primitive, for and bootstrapping communication security against injection/intrusion attacks. [<a href="https://github.com/yang-sec/CAN-SessionKey" style="color:red">Prototype souce code</a>]
+            </p></h6>
+        </div>  
+    </div>
+
+    <hr>    
+    <div class="w3-row">
+        <div class="w3-third">
+        <center>
+            <p class="pmargin">
+            <img class="w3-center" src="media/can-frame-signals.png" style="width:300px; height:168px; " align="middle">
+            </p>
+        </center>
+        </div>
+        <div class="longColumn">
+            <h4><p class="pmargin w3-text-indigo">
+            Signal-based Intrusion Detection for CAN Bus
+            </p></h4>
+            <h6><p class="pmargin">
+                Recent attacks show that automotive buses are no longer secure; they can be accessed by attackers though an exposed wired or wireless interface. At the absence of a relible message authenticity/integrity mechanism (like the one mentioned above), advanced attackers can inject false data to the CAN signal level, while looking innocuous by the pattern/frequency of the CAN messages (i.e., the payload level). To fight against such intelligent attacks, we propose <a href="https://arxiv.org/pdf/2205.01306.pdf" style="color:red">CANShield</a>, a signal-based intrusion detection system (IDS) for the CAN bus. CANShield is comprised of a novel data processing pipeline that transforms signal-level CAN data into 2D time series data, and a deep autoencoder-based anomaly detection module that is responsive to various intrusion attacks of different time scales. Preliminary experimental results on a high-fidelity signal-based CAN attack dataset (provided by ORNL) show the high accuracy and responsiveness of CANShield in detecting five advanced signal-level intrusions.
+            </p></h6>
+        </center>
+        </div>  
+    </div>
+
+    <hr>
+    <h4><p class="pmargin w3-text-indigo">Methodology & Proposed Work</p></h4>
+    <h6>
+        <p class="pmargin">
+        &#9726; Our current defense methodology for automotive communication networks boils down to two lines of defense:  bootstrapping secure communication with cryptographic protocols or secure hardware (prevention as 1st line)  and machine-learning-based intrusion detection (detection as 2nd line).  
+        <br>&#9726; We will consider another line of defense, which would be resilience/fault-tolerance mechanisms to quicky recover from the damaged state, potentially leveraging redundancy or distributed consensus.
+        <br>&#9726; We plan to extend the prevention-detection-resilience methodology to securing emergent cyber-physical systems (CPS), such as intelligent IoT systems, automotive Ethernet, and sensor networks.
+        </p>
+    </h6>
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+</body>
+</html>

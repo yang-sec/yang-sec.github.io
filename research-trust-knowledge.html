@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Yang Xiao - Trust Worthy Knowledge Aggregation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/yangicon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121588664-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-121588664-1');
+    </script>
+</head>
+
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large w3-indigo">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium">Yang Xiao</a>
+        <a href="service.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Service</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Members</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Teaching</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Research</a>
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Publication</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Home</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>    
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large">Research</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>    
+        <a href="service.html" class="w3-bar-item w3-button w3-padding-large">Service</a>  
+    </div>
+    
+</div>
+
+<div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+    <h3><p class="pmargin w3-center"><b>Trustworthy Knowledge Aggregation in an Untrusted World</b></p></h3>
+
+    <hr>
+    <div class="w3-row">
+        <div class="w3-half">
+        <center>
+            <p class="pmargin">
+            <img class="w3-center" src="media/privacyguard.png" style="width:450px; height:252; " align="middle">
+            </p>
+        </center>
+        </div>
+
+        <div class="longColumn">
+            <h4><p class="pmargin w3-text-indigo">
+            PrivacyGuard - Enforcing Private Data Usage Control
+            </p></h4>
+            <h6><p class="pmargin">
+                This research addresses a long-standing privacy problem facing the digitized economy—individual data owners often lose control on how their data can be used once sharing the data with another party. This problem was epitomized by the 2015 <a href="https://en.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal" style="color:red">Facebook-Cambridge Analytica Data Scandal</a>, where millions of Facebook user profiles were acquired by Cambridge Analytica and then used for political purposes without user consent. To tackle this problem, we developed the <a href="https://arxiv.org/pdf/1904.07275.pdf" style="color:red">PrivacyGuard</a> platform to empower data owners with full control over the access and actual usage of their private data by any data consumer. PrivacyGuard combines blockchain smart contract and trusted execution environment (TEE) to enable transparent enforcement of private data computation tasks and fine-grained usage control. A core feature of PrivacyGuard is the atomic execution of off-chain result commitment and on-chain data usage contract fulfillment between data owners and data consumers in the mutually distrustful scenario. [<a href="https://github.com/yang-sec/PrivacyGuard" style="color:red">Prototype souce code</a>]
+            </p></h6>
+        </div>  
+    </div>
+
+    <hr>    
+    <div class="w3-row">
+        <div class="w3-half">
+        <center>
+            <p class="pmargin">
+            <img class="w3-center" src="media/decentruth-datafeed.png" style="width:450px; height:252px; " align="middle">
+            </p>
+        </center>
+        </div>
+        <div class="longColumn">
+            <h4><p class="pmargin w3-text-indigo">
+            DecenTruth - A Decentralized, Truth Discovering Data Feed for DApp
+            </p></h4>
+            <h6><p class="pmargin">
+                For blockchain-based decentralization applications (DApps) to achieve real-world relevance, such as those for equity investment or insurance, they need to feed on data about the external world. However, validity of the external data is beyond the jurisdiction of blockchain consensus. DApp participants may suffer huge monetary or operational loss if the DApp feeds on data from faulty or malicious sources. (known as the "external data challenge"). Our solution, <a href="https://www.cnsr.ictas.vt.edu/publication/decentruth.pdf" style="color:red">PrivacyGuard</a>DecenTruth</p>, leverages truth discovery (TD)—a data mining method—and asynchronous Byzantine fault-tolerant (BFT) consensus to realize a fully decentralized, truth discovering data feed system. It enables a group of mutually distrustful DApp participants to jointly estimate the ground truths of data objects and reliability of external sources from noisy and potentially conflicting (Byzantine) multi-sourced inputs.
+            </p></h6>
+        </center>
+        </div>  
+    </div>
+
+    <hr>
+    <h4><p class="pmargin w3-text-indigo">Proposed Work</p></h4>
+    <h6>
+        <p class="pmargin">
+        &#9726; Extend PrivacyGuard to accommodating <b>federated learning/distributed machine learning tasks</b> and breaking down <b>information silos</b> among mutually distrustful data owners, in the face of powerful adversaries who can create adaptive attack samples, employ advanced inference techniques, and/or control the network synchrony between distributed parties. This research will be at the intersection of fault-tolerant consensus/aggregation, trustworthy computing, and adversarial AI/ML.
+        <br>&#9726; Explore using DecenTruth to tackle misinformation which has been plaguing the world of social media.
+        </p>
+    </h6>
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+</body>
+</html>

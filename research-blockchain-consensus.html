@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Yang Xiao - Blockchain Consensus</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/yangicon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121588664-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-121588664-1');
+    </script>
+</head>
+
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large w3-indigo">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium">Yang Xiao</a>
+        <a href="service.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Service</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Members</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Teaching</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Research</a>
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Publication</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Home</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>    
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large">Research</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>    
+        <a href="service.html" class="w3-bar-item w3-button w3-padding-large">Service</a>  
+    </div>
+    
+</div>
+
+<div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+    <h3><p class="pmargin w3-center"><b>Understanding Blockchain Consensus and Security</b></p></h3>
+
+    <hr>
+    <div class="w3-row">
+        <div class="w3-half">
+        <center>
+            <p class="pmargin">
+            <img class="w3-center" src="media/blockchain-composition-trilemma.png" style="width:450px; height:252; " align="middle">
+            </p>
+        </center>
+        </div>
+
+        <div class="longColumn">
+            <h4><p class="pmargin w3-text-indigo">
+            Fundamentals of Blockchain Consensus
+            </p></h4>
+            <h6><p class="pmargin">
+                Consensus protocol is the crucial component underpinning the security of a blockchain system. It enables decentralized, mutually distrustful parties to agree on a unified transaction history without the help of a central authority. In a <a href="https://arxiv.org/pdf/1904.04098.pdf" style="color:red">comprehensive survey & tutorial</a>, we reviewed a wide range of consensus protocols for blockchain and distributed computing systems, provided a taxonomy for blockchain consensus protocols based on a novel five-component framework, and performed qualitative analyses on the security and scalability of each class of protocols. We summarized some of the key principles for designing a blockchain consensus protocol and identified the essential tradeoffs around the security-decentralization-scalability trilemma.
+            </p></h6>
+        </div>  
+    </div>
+
+    <hr>    
+    <div class="w3-row">
+        <div class="w3-half">
+        <center>
+            <p class="pmargin">
+            <img class="w3-center" src="media/consensus-security-networking.png" style="width:450px; height:252px; " align="middle">
+            </p>
+        </center>
+        </div>
+        <div class="longColumn">
+            <h4><p class="pmargin w3-text-indigo">
+            Analyzing Nakamoto Consensus from a Networking Perspective
+            </p></h4>
+            <h6><p class="pmargin">
+                Prior wisdom states that the security of Nakamoto Consensus, the protocol used by Bitcoin, relies on the honest majority assumption that all networked nodes can maintain one consistent and irreversible blockchain ledger if the majority computing power are honest (i.e., resisting the “51% attack”). This assumption, however, overlooks the practical aspect that the heterogeneous connectivity pattern of the underlying P2P network can also have profound impact on the consensus dynamics and ultimately the consensus security. In particular, a well-connected node has a greater chance to win a fork race than those who are sparsely connected. Eyeing on this gap, we developed an <a href="https://arxiv.org/pdf/2002.08912.pdf" style="color:red">analytical model</a> to quantify the impact of P2P network connectivity on the safety and fairness of Nakamoto Consensus. Under different adversarial cases, this model can capture a node's "communication capability" in a fork, i.e., winning chance for a fork race, and predict key security metrics, including long-term fork rate which reveals the actual “51% attack” threshold (safety) and the mining revenue distribution among all nodes (fairness).
+            </p></h6>
+        </center>
+        </div>  
+    </div>
+
+    <hr>
+    <h4><p class="pmargin w3-text-indigo">Proposed Work</p></h4>
+    <h6>
+        <p class="pmargin">
+        &#9726; Extend the current model-based analysis to a more practical case where there is only partial measurement on the P2P network topology.
+        <br>&#9726; Cross-layer analysis on the centralization risk and security vulnerabilities of different functional layers of a blockchain system (e.g., network, consensus, incentive, cryptography, software, etc.) in the aim of identifying security bottlenecks.
+        <br>&#9726; To develop <b>efficient, robust consensus mechanisms</b> customized to certain networking/synchrony profiles, for instance, to attain the highest possible transaction throughput and fault tolerance while weathering temporary network partitions.
+        </p>
+    </h6>
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+</body>
+</html>
