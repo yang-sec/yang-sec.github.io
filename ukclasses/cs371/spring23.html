@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>CS371 S23</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/yangicon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171741102-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-171741102-1');
+    </script>
+</head>
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large" style="background-color:#0033A0;color:white">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium">Yang Xiao</a> -->
+        <a href="https://www.engr.uky.edu/research-faculty/departments/computer-science" class="w3-bar-item w3-padding-small"><img class="w3-center" src="../../media/uk-lockup-white.png" style="width:164px; height:48px; " align="middle"></a>
+        <!-- <a href="service.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Service</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Members</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right w3-white">Teaching</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Research</a>
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Publication</a> -->
+        <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Yang Xiao Home</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">
+        <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large">Yang Xiao Home</a>    
+        <!-- <a href="publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large">Research</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>    
+        <a href="service.html" class="w3-bar-item w3-button w3-padding-large">Service</a>   -->
+    </div>
+
+</div>
+
+<div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+
+
+    <h2> <p class="pmargin w3-text-indigo w3-center"> CS 371 (Spring 2023)<br>Introduction to Computer Networking</p></h2>
+
+    <h4><p class="pmargin w3-text-indigo">Course Information</p></h4>
+    <h6><p class="pmargin">
+        <b>Instructor:</b> <a href="../../index.html" style="color:blue">Yang Xiao</a> (contact: xiaoy[AT]uky.edu)
+        <br><b>Meeting Times:</b> Mon/Wed/Fri 11:00 am – 11:50 pm (location: register course to know)
+        <br><b>Office Hour:</b> 233 Hardymon, Thursday 2:00 pm – 3:00 pm and by appointment
+    </p></h6>
+
+
+    <h4><p class="pmargin w3-text-indigo">Course Description</p></h4>
+    <h6><p class="pmargin">
+        Introduction to the principles and concepts of the Internet; data communications and digital channel characteristics; networking applications and protocols, client-server paradigm and network programming; reliable data transfer, end-to-end transport; addressing, forwarding and routing, datagram networks; media access control, data link control; selected topics from cloud computing, network security and network management. Concepts are combined with programming and other hands-on assignments to enhance the learning of these topics.
+    </p></h6>
+<!--     <h6><p class="pmargin" style="margin-left:50px">
+        &#9726;&nbsp; Blockchain system architecture
+        <br>&#9726;&nbsp; Consensus and fault tolerance
+        <br>&#9726;&nbsp; Security, trust, and performance issues of blockchain core
+        <br>&#9726;&nbsp; Blockchain network security
+        <br>&#9726;&nbsp; New development in cryptocurrencies
+        <br>&#9726;&nbsp; Smart contract and decentralized application
+        <br>&#9726;&nbsp; Blockchain and data management
+        <br>&#9726;&nbsp; Blockchain and trusted computing
+        <br>&#9726;&nbsp; Blockchain application to other domains (IoT, supply chain, digital identity, etc.)
+    </p></h6> -->
+    <h6><p class="pmargin">
+        <b>Learning Outcomes:</b> 
+    </p></h6>
+
+    <!-- <h4><p class="pmargin w3-text-indigo">Course Project List (<a href="student-proj.html" style="color:red" target="_blank">Link</a>)</p> </h4> -->
+
+    <h4><p class="pmargin w3-text-indigo">Course Schedule</p></h4>
+
+    <style>
+    .classtable {
+        border:1px solid #C0C0C0;
+        border-collapse:collapse;
+        padding:5px;
+    }
+    .classtable th {
+        border:1px solid #C0C0C0;
+        padding:5px;
+        background:#F0F0F0;
+    }
+    .classtable td {
+        border:1px solid #C0C0C0;
+        padding:5px;
+    }
+    .classtable {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    </style>
+    <table class="pmargin classtable">
+        <!-- <caption>Table 1</caption> -->
+        <col width="20px" />
+        <col width="800px" />
+        <col width="90px" />
+        <thead>
+        <tr>
+            <th>Week</th>
+            <th>Agenda (<b>[R]</b>/<b>[C]</b>: Required/Recommended Reading)</th>
+            <th>Due</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>
+                <!-- <b>Introduction</b> -->
+                <!-- <br><b>[R]</b> <a href="https://www.lopp.net/pdf/princeton_bitcoin_book.pdf" style="color:black;" target="_blank">The Princeton Bitcoin book</a>; <a href="https://ethereum.org/en/developers/docs/intro-to-ethereum/" style="color:black;" target="_blank">Intro to Ethereum</a>. -->
+                <li>01/09: Course Introduction. </li>
+                <li>01/11: </li>
+                <li>01/13: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <!-- <b>Security of Blockchain</b> -->
+                <li>01/16: No class – Martin Luther King Day holiday</li>
+                <li>01/18: </li>
+                <li>01/20: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <!-- <b>Smart Contract for IoT</b>
+                <br><b>[R]</b> 
+                <a href="https://www.gemini.com/cryptopedia/crypto-smart-contracts-explained" style="color:black;" target="_blank">What Are Smart Contracts</a>;  -->
+                <li>01/23: </li>
+                <li>01/25: </li>
+                <li>01/27: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+               <!--  <b>Alternative Consensus Protocols</b>
+                <br><b>[YouTube]</b> Leslie Lamport on 
+                <a href="https://www.youtube.com/watch?v=gKSbAEbNifA" style="color:black;" target="_blank">Byzantine Generals and Byzantine Failures</a> and 
+                <a href="https://www.youtube.com/watch?v=RFkzp7WXAT4" style="color:black;" target="_blank">the origins of Paxos</a>. -->
+                <li>01/30: </li>
+                <li>02/01: </li>
+                <li>02/03: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>
+                <!-- <b>Blockchain Sharding</b> -->
+                <li>02/06: </li>
+                <li>02/08: </li>
+                <li>02/10: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>
+                <!-- <b>Blockchain for Privacy and Trusted Computing</b> -->
+                <li>02/13: </li>
+                <li>02/15: </li>
+                <li>02/17: </li>
+                
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>
+                <!-- <b>Blockchain Network Security</b> -->
+                <li>02/20: </li>
+                <li>02/22: </li>
+                <li>02/24: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>
+                <!-- <b>The Blockchain Oracle Problem</b> -->
+                <li>02/27: </li>
+                <li>03/01: </li>
+                <li>03/03: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>
+                <!-- <b>Project Mid-term Presentations (15 minutes each)</b> -->
+                <li>03/06: </li>
+                <li>03/08: </li>
+                <li>03/10: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>
+                <!-- <b>Blockchain for Federated Learning</b> -->
+                <li>03/13: No class – Spring Break </li>
+                <li>03/15: No class – Spring Break </li>
+                <li>03/17: No class – Spring Break </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>
+                <!-- <b>Decentralized Identity</b> -->
+                <li>03/20: </li>
+                <li>03/22: </li>
+                <li>03/24: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>
+                <!-- <b>Digital Provenance and NFT</b> -->
+                <li>03/27: </li>
+                <li>03/29: </li>
+                <li>03/31: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>
+                <!-- <b>Cross-chain Interoperability</b> -->
+                <li>04/03: </li>
+                <li>04/05: </li>
+                <li>04/07: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>
+                <!-- <b>Redactable Blockchains</b> -->
+                <li>04/10: </li>
+                <li>04/12: </li>
+                <li>04/14: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>
+                <!-- <b>DeFi Security</b> -->
+                <li>04/17: </li>
+                <li>04/19: </li>
+                <li>04/21: </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>
+                <li>04/24: (Prep Days)</li>
+                <li>04/26: (Prep Days)</li>
+                <li>04/28: No class. </li>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>
+                <li>05/01: Final exam, 3:30-5:30 PM (tentative)</li>
+            </td>
+            <td>&nbsp;</b></td>
+        </tr>
+        <tbody>
+    </table>
+
+
+
+    <h4><p class="pmargin w3-text-indigo">Course Activities and Grading</p></h4>
+
+    <h6><p class="pmargin">(A more detailed syllabus and rubrics will be released in <a href="https://www.uky.edu/canvas/" style="color:blue">Canvas</a>)</p></h6>
+
+    <h6><p class="pmargin">
+        <b>Class attendance (5%):</b> Students are required to attend every class. The attendance points will be given if a student attended more than 70% of the classes and did not miss more than a consecutive month.
+    </p></h6>
+    <h6><p class="pmargin">
+        <b>Homework (20%):</b> 
+    <h6><p class="pmargin">
+        <b>Programing Assignments (30%):</b>
+    <h6><p class="pmargin">
+        <b>Exams (45%):</b>
+    </p></h6>
+
+    <h6><p class="pmargin">
+        After the final percentage grade is calculated, the following scale is used to determine the final letter grade: 90-100% (A), 76-89% (B), 65-75% (C), 50-64% (D), 0-49% (E).
+        </p></h6>
+    </p></h6>
+
+
+
+
+    <h4><p class="pmargin w3-text-indigo">Policies</p></h4>
+    <h6><p class="pmargin">
+        <b>Academic Integreity:</b> Please strictly follow the <a href="https://www.uky.edu/universitysenate/ao" style="color:blue">Academic Offenses Rules</a> (plagiarism, cheating, and falsification or misuse of academic records). Also keep in mind that any copyrighted materials (e.g., images and other media), published contents (e.g., academic papers, books, web sources, online tools) used in your submissions and project should be properly cited. Ideas from people other than your own (for the project—ideas from outside your group) should be acknowledged.
+    </p></h6>
+    <h6><p class="pmargin">
+        <b>Late Policy:</b> Late submissions (HWs and PAs) will be subject to a 25% penalty if you submit within 24 hours after the deadline, or a 50% penalty if you submit 24-48 hours after the deadline. Any submissions afterwards will be given the 0 score. Exceptions to this rule may be requested providing appropriate documentation (e.g., medical) which will be considered at the discretion of the instructor.    
+    </p></h6>
+    <h6><p class="pmargin">
+        <b>Disability and Special Accommodation:</b> Please let the instructor know of any needed accommodation in the first two weeks. Please also see <a href="https://www.uky.edu/DisabilityResourceCenter/content/academic-accommodations" style="color:blue">Academic Accommodation</a> for further assistance. 
+    </p></h6>
+    <h6><p class="pmargin">
+        <a href="https://www.uky.edu/universitysenate/acadpolicy" style="color:blue">Academic Policy Statements</a>, 
+        <a href="https://www.uky.edu/universitysenate/syllabus-dei" style="color:blue">Diversity, Equity, and Inclusion</a>, 
+        <a href="https://www.uky.edu/universitysenate/student-resources" style="color:blue">Resources Available to Students</a>
+    </p></h6>
+
+    <h4><p class="pmargin w3-text-indigo">Learning/Research Resources</p></h4>
+    <h6><p class="pmargin">
+        <a href="https://libraries.uky.edu/" style="color:blue">UK Libraries</a>, 
+        <a href="https://www.uky.edu/studentacademicsupport/free-tutoring-and-coaching-resources" style="color:blue">Free Tutoring and Coaching at UK</a>, 
+        <a href="https://scholar.google.com/" style="color:blue">Google Scholar</a>,
+        <a href="https://dl.acm.org/" style="color:blue">ACM Digital Library</a>,
+        <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" style="color:blue">IEEE Xplore</a>,
+        <a href="https://dblp.org/" style="color:blue">dblp: computer science bibliography</a>
+    </p></h6>
+
+</div>
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+</body>
+</html>
