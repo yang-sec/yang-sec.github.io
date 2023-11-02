@@ -31,6 +31,31 @@
     {
         content: " ";
     }
+
+    .collapsible {
+        margin-left: 30px;
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 6px;
+      /*width: 100%;*/
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+        margin-left: 30px;
+      padding: 0 0px;
+      display: none;
+      overflow: hidden;
+      /*background-color: #f1f1f1;*/
+    }
 </style>
 
 <head>
@@ -119,7 +144,8 @@
     <h3> <p class="pmargin w3-text-indigo"> News </p></h3>
     <h6>
         <p class="pmargin">
-        &#9726;&nbsp; 08/2023: Our paper "AAKA: An Anti-Tracking Cellular Authentication Scheme Leveraging Anonymous Credentials" was accepted by NDSS 2024.
+        &#9726;&nbsp; 10/2023: I was <a href="https://fox56news.com/news/kentucky/keeping-your-bets-secure-on-mobile-apps-in-kentucky/">interviewed by Fox 56 News</a> on mobile secuity issues about online sports betting.
+        <br>&#9726;&nbsp; 09/2023: Our paper "AAKA: An Anti-Tracking Cellular Authentication Scheme Leveraging Anonymous Credentials" was accepted by NDSS 2024.
         <br>&#9726;&nbsp; 08/2023: Our paper "Bijack: Breaking Bitcoin Network with TCP Vulnerabilities" was accepted to ESORICS 2023.
         <br>&#9726;&nbsp; 07/2023: Our paper  "CANShield: Deep Learning-Based Intrusion Detection Framework for Controller Area Networks at the Signal-Level" was accepted to IEEE IoT Journal.
         <br>&#9726;&nbsp; 05/2023: I started serving as a TPC Member for IEEE INFOCOM 2024 and MILCOM 2023.
@@ -127,7 +153,7 @@
         <br>&#9726;&nbsp; 03/2023: Our paper  "MS-PTP: Protecting Network Timing from Byzantine Attacks" was accepted by ACM WiSec 2023.
         <br>&#9726;&nbsp; 02/2023: Our paper  "ARI: Attestation of Real-time Mission Execution Integrity" was accepted by USENIX Security 2023.
         <br>&#9726;&nbsp; 12/2022: Our paper  "A Decentralized Truth Discovery Approach to the Blockchain Oracle Problem" was accepted by IEEE INFOCOM 2023.
-        <br>&#9726;&nbsp; 11/2022: I gave a remote talk titled "Blockchain and Trusted Execution Environment: Security Properties, Synergies, and a Privacy Application" to the Delta 2022 Cybersecurity Conference at UTN Facultad Regional Delta, Argentina.
+        <!-- <br>&#9726;&nbsp; 11/2022: I gave a remote talk titled "Blockchain and Trusted Execution Environment: Security Properties, Synergies, and a Privacy Application" to the Delta 2022 Cybersecurity Conference at UTN Facultad Regional Delta, Argentina.
         <br>&#9726;&nbsp; 10/2022: Our paper "SofitMix: A Secure Offchain-Supported Bitcoin-Compatible Mixing Protocol" was accepted by IEEE TDSC.
         <br>&#9726;&nbsp; 09/2022: Our paper "Squeezing More Utility via Adaptive Clipping on Deferentially Private Gradients in Federated Meta-Learning" was accepted by ACSAC 2022.
         <br>&#9726;&nbsp; 08/2022: I started the Assistant Professor position at Dept. of CS, University of Kentucky.
@@ -136,9 +162,27 @@
         <br>&#9726;&nbsp; 04/2022: Our paper  "CANShield: Signal-based Intrusion Detection for Controller Area Networks" was accepted by escar USA conference 2022.
         <br>&#9726;&nbsp; 02/2022: Our paper "FLARE: Defending Federated Learning against Model Poisoning Attacks via Latent Space Representations" was accepted by ASIACCS 2022.
         <br>&#9726;&nbsp; 02/2022: Our paper "MANDA: On Adversarial Example Detection for Network Intrusion Detection System" was accepted by IEEE TDSC.
-        <br>&#9726;&nbsp; 12/2021: Our paper "Decentralized Spectrum Access System: Vision, Challenges, and a Blockchain Solution" was accepted by IEEE Wireless Communications.
+        <br>&#9726;&nbsp; 12/2021: Our paper "Decentralized Spectrum Access System: Vision, Challenges, and a Blockchain Solution" was accepted by IEEE Wireless Communications. -->
         </p>
     </h6>
+
+    <button type="button" class="collapsible">Earlier News</button>
+        <div class="content">
+        <h6>
+          <p>
+        &#9726;&nbsp; 11/2022: I gave a remote talk titled "Blockchain and Trusted Execution Environment: Security Properties, Synergies, and a Privacy Application" to the Delta 2022 Cybersecurity Conference at UTN Facultad Regional Delta, Argentina.
+        <br>&#9726;&nbsp; 10/2022: Our paper "SofitMix: A Secure Offchain-Supported Bitcoin-Compatible Mixing Protocol" was accepted by IEEE TDSC.
+        <br>&#9726;&nbsp; 09/2022: Our paper "Squeezing More Utility via Adaptive Clipping on Deferentially Private Gradients in Federated Meta-Learning" was accepted by ACSAC 2022.
+          <br>&#9726;&nbsp; 08/2022: I started the Assistant Professor position at Dept. of CS, University of Kentucky.
+        <br>&#9726;&nbsp; 06/2022: I started serving the Web Co-chair of INFOCOM 2023.        
+        <br>&#9726;&nbsp; 05/2022: I successfully defended my Ph.D. dissertation "Blockchain and Distributed Consensus: From Security Analysis to Novel Applications".
+        <br>&#9726;&nbsp; 04/2022: Our paper  "CANShield: Signal-based Intrusion Detection for Controller Area Networks" was accepted by escar USA conference 2022.
+        <br>&#9726;&nbsp; 02/2022: Our paper "FLARE: Defending Federated Learning against Model Poisoning Attacks via Latent Space Representations" was accepted by ASIACCS 2022.
+        <br>&#9726;&nbsp; 02/2022: Our paper "MANDA: On Adversarial Example Detection for Network Intrusion Detection System" was accepted by IEEE TDSC.
+        <br>&#9726;&nbsp; 12/2021: Our paper "Decentralized Spectrum Access System: Vision, Challenges, and a Blockchain Solution" was accepted by IEEE Wireless Communications.
+        </p>
+        </h6>
+        </div>
 </div>
 
 <!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
@@ -155,7 +199,22 @@
             x.className = x.className.replace(" w3-show", "");
         }
     }
-    
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 </script>
 
 </body>
