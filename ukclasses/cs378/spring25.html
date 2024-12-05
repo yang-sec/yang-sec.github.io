@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>CS378 S25</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/yangicon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171741102-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-171741102-1');
+    </script>
+</head>
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large" style="background-color:#0033A0;color:white">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium">Yang Xiao</a> -->
+        <a href="https://www.engr.uky.edu/directory/xiao-yang" class="w3-bar-item w3-padding-small"><img class="w3-center" src="../../media/uk-lockup-white.png" style="width:164px; height:48px; " align="middle"></a>
+        <!-- <a href="service.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Service</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Members</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right w3-white">Teaching</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Research</a>
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Publication</a> -->
+        <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Yang Xiao Home</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">
+        <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large">Yang Xiao Home</a>    
+        <!-- <a href="publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large">Research</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>    
+        <a href="service.html" class="w3-bar-item w3-button w3-padding-large">Service</a>   -->
+    </div>
+
+</div>
+
+<div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+
+
+    <h2> <p class="pmargin w3-text-indigo w3-center"> CS 572 (Fall 2024)<br>Network Security</p></h2>
+
+    <h4><p class="pmargin w3-text-indigo">Course Information</p></h4>
+    <h6><p class="pmargin">
+        <b>Instructor:</b> <a href="../../index.html" style="color:blue">Yang Xiao</a> (contact: xiaoy[AT]uky.edu)
+        <br><b>Meeting Times:</b> Tue/Thu 12:30 PM – 1:45 PM Eastern Time
+        <br><b>Office Hour:</b> Hardymon Rm 233, Tue/Thu 2:10 PM – 3:00 PM Eastern Time
+        <!-- <br><b>TA:</b> TBD (contact: TBD), Office Hour: TBD -->
+    </p></h6>
+
+
+    <h4><p class="pmargin w3-text-indigo">Course Description</p></h4>
+    <h6><p class="pmargin">
+        TThe study of secrecy in digital systems. Methods of keeping information secure from classical systems dating from ancient times to modern systems based on modern mathematics. Basic methods of encryption using public key systems, block ciphers, and stream ciphers. The mathematical tools for the design and analysis of such systems. Topics will include classical cryptography, modern methods of public and private key encryption, authentication and digital signatures, hashing, and passwords. Number theory, abstract algebra, combinatorics, and complexity theory necessary for the design and analysis of cryptographic systems.
+    </p></h6>
+
+    <h4><p class="pmargin w3-text-indigo">Textbooks and Materials</p></h4>
+    <h6><p class="pmargin">
+        <!-- <em>Computer Security and the Internet: Tools and Jewels</em>, second edition, by Paul C. van Oorschot, Springer, 2022. ISBN: 978-3-030-83410-4 (hardcopy), 978-3-030-83411-1 (eBook).
+        PDF of chapters is available online at <a href="http://people.scs.carleton.ca/~paulv/toolsjewels.html" style="color:blue">the author’s personal website</a>.
+        More recommended materials will be published in Canvas. -->
+    </p></h6>
+
+
+    <h4><p class="pmargin w3-text-indigo">Course Schedule (Tentative)</p></h4>
+
+
+
+    <h4><p class="pmargin w3-text-indigo">Learning/Research Resources</p></h4>
+    <h6><p class="pmargin">
+        <a href="https://libraries.uky.edu/" style="color:blue">UK Libraries</a>, 
+        <a href="https://www.uky.edu/studentacademicsupport/free-tutoring-and-coaching-resources" style="color:blue">Free Tutoring and Coaching at UK</a>, 
+        <a href="https://scholar.google.com/" style="color:blue">Google Scholar</a>,
+        <a href="https://dl.acm.org/" style="color:blue">ACM Digital Library</a>,
+        <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" style="color:blue">IEEE Xplore</a>,
+        <a href="https://dblp.org/" style="color:blue">dblp: computer science bibliography</a>
+    </p></h6>
+
+</div>
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+</body>
+</html>
