@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Yang Xiao</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="../media/sdsl-icon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+
+    .collapsible {
+        margin-left: 30px;
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 6px;
+      /*width: 100%;*/
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+        margin-left: 30px;
+      padding: 0 0px;
+      display: none;
+      overflow: hidden;
+      /*background-color: #f1f1f1;*/
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171741102-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-171741102-1');
+    </script>
+</head>
+
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large" style="background-color:#0033A0;color:white">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium">Yang Xiao</a> -->
+        <a href="https://engr.uky.edu/people/yang-xiao" class="w3-bar-item w3-padding-small"><img class="w3-center" src="../media/uk-lockup-white.png" style="width:164px; height:48px; " align="middle"></a>
+        <a href="../opening.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Opening</a>
+        <!-- <a href="service.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Service</a> -->
+        <a href="../members.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Members</a>
+        <a href="../teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Teaching</a>
+        <a href="../publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Publication</a>
+        <a href="../research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Research</a>
+        <a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">SDSL Home</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">
+        <a href="../index.html" class="w3-bar-item w3-button w3-padding-large">SDSL Home</a>    
+        <a href="../research.html" class="w3-bar-item w3-button w3-padding-large">Research</a>
+        <a href="../publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
+        <a href="../teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+        <a href="../members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>    
+        <!-- <a href="service.html" class="w3-bar-item w3-button w3-padding-large">Service</a>   -->
+        <a href="../opening.html" class="w3-bar-item w3-button w3-padding-large">Opening</a>
+    </div>
+</div>
+
+
+<div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+    <div class="w3-row-padding" id="front">
+        <div class="w3-third">
+    <!-- <div class="w3-card-4"> -->
+            <h2><p class="pmargin">
+            <center>
+            <img class="w3-center" src="../peoplepics/YangXiao.jpg" style="width:206px; height:200px; " align="middle">
+            </center>
+            </p></h2>
+        <!-- </div> -->
+        </div>
+
+        <div class="w3-twothird">
+            <h4> <p class="pmargin w3-text-black"> Yang Xiao </p></h4>
+            <h6>
+                <p class="pmargin">
+                Assistant Professor
+                <br><a href="https://yang-sec.github.io/group.html" style="color:blue">Secure Decentralized Systems Lab (SDSL)</a>
+                <br>Department of Computer Science, University of Kentucky
+                <br>Email: xiaoy[AT]uky.edu
+                <br>Office: 233 James F. Hardymon Building
+                <br>Phone: (859) 257-3101
+                <br><a href="https://scholar.google.com/citations?user=BiVROyUAAAAJ&hl=en" style="color:blue">Google Scholar</a>
+                <a href="https://dblp.org/pid/181/1848-10.html" style="color:blue">dblp</a> 
+                <a href="Curriculum_Vitae.pdf" style="color:blue">CV</a> 
+                </p>
+            </h6>
+        </div>
+    </div>
+
+    <h3> <p class="pmargin w3-text-indigo"> Bio </p></h3>
+    <h6>
+        <p class="pmargin">
+        Dr. Yang Xiao is an Assistant Professor in the <a href="https://engr.uky.edu/academics/departments/cs" style="color:blue">Department of Computer Science</a> at the <a href="https://uky.edu/" style="color:blue">University of Kentucky</a>. His research area is <b>network and information security</b>, focusing on the security and privacy issues in decentralized systems/applications, distributed computing systems, and mobile communication networks. Yang received his Ph.D. in Computer Engineering from Virginia Tech in 2022.
+        Before that, he received his bachelor's degree from Shanghai Jiao Tong University (SJTU) and master's degree from University of Michigan.
+        </p>
+        <!-- <p class="pmargin"><b>I am always looking for self-motivated students to work on security and privacy topics in blockchain, next-G mobile networks, distributed machine learning systems, among other exciting things. Check out <a href="members.html" style="color:red">Members</a> for details.</b></p> -->
+        
+    </h6>
+
+    <h3> <p class="pmargin w3-text-indigo"> Service </p></h3>
+
+    <h4> <p class="pmargin w3-text-black"> Program Committees </p></h4>
+    <h6>
+        <p class="pmargin">
+        TPC Member, ACSAC 2024.
+        <br>TPC Member, IEEE INFOCOM 2024, 2025.
+        <br>TPC Member, MILCOM 2023, 2024.
+        <br>TPC Member, IEEE ICCCN 2023.
+        </p>
+    </h6>
+
+    <h4> <p class="pmargin w3-text-black"> Conference Organization </p></h4>
+    <h6>
+        <p class="pmargin">
+        IEEE INFOCOM 2023, 2024: Web Chair, Organizing Committee.
+        <br>IEEE CNS 2020: Web Chair, Organizing Committee.
+        <br>University of Kentucky CyberCon, Planning Committee.
+        </p>
+    </h6>
+
+    <h4> <p class="pmargin w3-text-black"> Journal Reviewership </p></h4>
+    <h6>
+        <p class="pmargin">
+        IEEE/ACM Transactions on Networking (TON)
+        <br>IEEE Internet of Things Journal (IOT-J)
+        <br>IEEE Transactions on Dependable and Secure Computing (TDSC)
+        <br>IEEE Transactions on Information Forensics and Security (TIFS)
+        <br>IEEE Transactions on Computers (TC)
+        <br>IEEE Transactions on Communications (TCOM)
+        <br>ACM Transactions on Cyber-Physical Systems (TCPS)
+        <br>ACM Transactions on Privacy and Security (TOPS)
+
+        <!-- <br>International Journal of Intelligent Systems (INT2)
+        <br>Digital Communications and Networks (DCAN) -->
+        <!-- <br>EAI International Conference on Security and Privacy in Communication Networks (SecureComm) -->
+        <!-- <br>Future Generation Computer Systems (FGCS) -->
+
+    </h6>
+
+    <h4> <p class="pmargin w3-text-black"> Other Service </p></h4>
+    <h6>
+        <p class="pmargin">
+        Panelist for NSF
+        <br>Graduate Student Panelist, NSF SaTC PI Meeting 2019, October 2019.
+        </p>
+    </h6>
+
+</div>
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

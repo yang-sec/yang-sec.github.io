@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Yang Xiao - Teaching</title>
+<title>Yang Xiao</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -31,6 +31,31 @@
     {
         content: " ";
     }
+
+    .collapsible {
+        margin-left: 30px;
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 6px;
+      /*width: 100%;*/
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+        margin-left: 30px;
+      padding: 0 0px;
+      display: none;
+      overflow: hidden;
+      /*background-color: #f1f1f1;*/
+    }
 </style>
 
 <head>
@@ -51,10 +76,12 @@
 
     <div class="w3-row w3-large" style="background-color:#0033A0;color:white">
         <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-medium">Yang Xiao</a> -->
         <a href="https://engr.uky.edu/people/yang-xiao" class="w3-bar-item w3-padding-small"><img class="w3-center" src="media/uk-lockup-white.png" style="width:164px; height:48px; " align="middle"></a>
-        <a href="opening.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Opening</a>
+        <a href="opening.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right w3-white">Opening</a>
+        <!-- <a href="service.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Service</a> -->
         <a href="members.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Members</a>
-        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right w3-white">Teaching</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Teaching</a>
         <a href="publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Publication</a>
         <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Research</a>
         <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">SDSL Home</a>
@@ -67,36 +94,27 @@
         <a href="publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
         <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
         <a href="members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>    
+        <!-- <a href="service.html" class="w3-bar-item w3-button w3-padding-large">Service</a>   -->
         <a href="opening.html" class="w3-bar-item w3-button w3-padding-large">Opening</a>
     </div>
-
 </div>
 
+
 <div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
-<!--     <div class ='w3-center w3-padding-32'>
-        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
-    </div> -->
 
-
-
-    <h3> <p class="pmargin w3-text-indigo"> Teaching </p></h3>
-    <h6>
-        <p class="pmargin">
-            CS 371: Introduction to Computer Networking, <a href="ukclasses/cs371/spring23.html" style="color:blue">Spring 2023</a>, <a href="ukclasses/cs371/spring24.html" style="color:blue">Spring 2024</a>.
-        <br>CS 378: Introduction to Cryptology, <a href="ukclasses/cs378/spring25.html" style="color:blue">Spring 2025</a>.
-        <br>CS 572: Network Security, <a href="ukclasses/cs572/fall23.html" style="color:blue">Fall 2023</a>, <a href="ukclasses/cs572/fall24.html" style="color:blue">Fall 2024</a>.
-        <br>CS 585/685: Intermediate/Special Topics in Computer Science: Blockchain Technologies, <a href="ukclasses/blockchain-tech/main.html" style="color:blue">Fall 2022</a>.
-        </p>
-    </h6>
-
-<!--     <h3> <p class="pmargin w3-text-indigo"> Previous Teaching </p></h3>
-    <h6>
-        <p class="pmargin">
-        Guest Lecturer, "Cryptocurrency & Blockchain," CS 5560: Fundamentals of Information Security, Virginia Tech, March 2019.
-        <br>Graduate Teaching Assistant, ECE 2534: Microcontroller Programming and Interfacing, Virginia Tech, Fall 2017.
-        <br>Undergraduate Tutor, CS 358: Data Structure, SJTU, Fall 2014.
-        </p>
-    </h6> -->
+    <!-- <h2> <p class="pmargin w3-text-black" align="center"> <b>Secure Decentralized Systems Lab</b> </p></h2> -->
+    <h3> <p class="pmargin w3-text-indigo"> Prospective Students </p></h3>
+        <h6>
+            <p class="pmargin">
+            <b>For Ph.D. Applicants:</b> [Update Nov'24] Our RA positions have been filled as of Nov 2024. Future openings will be posted once available.
+            <!-- I am looking for self-motivated Ph.D. students to work on security and privacy topics in distributed/decentralized systems, next-G mobile networks, and general wireless networks. Experience in embedded systems, wireless communication/networking systems, applied cryptography, or ML/statistical methods is encouraged. If you are interested in working me, feel free to send an email to <em>xiaoy[AT]uky[DOT]edu</em> with your CV, transcripts, and a few sentences describing your research interests and expectation.  -->
+            <!-- You can also mention my name in your formal application to the University of Kentucky CS Department. There are two degree program choices: <a href="https://www.engr.uky.edu/computer-science/admissions" style="color:blue">Ph.D. in Computer Science</a> and <a href="https://www.engr.uky.edu/computer-engineering/admissions" style="color:blue">Ph.D. in Computer Engineering</a>, both within the CS Department.  -->
+            <br><br>
+            <b>For UK CS Master Students:</b> If you are interested in pursuing an independent study or a master's thesis/project on relevant topics, please contact me so we can discuss. Taking CS471G/571/572 or similar theory courses ahead is recommended.
+            <br><br>
+            <b>For UK CS Undergrad Students:</b> If you are interested in pursuing an independent study or the Cybersecurity Certificate on relevant topics, please contact me so we can discuss. Taking two of CS371/378/564/571/572 ahead is recommended.
+        </h6>
+    </div>
 </div>
 
 <!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
@@ -113,8 +131,28 @@
             x.className = x.className.replace(" w3-show", "");
         }
     }
+</script>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 </script>
 
 </body>
 </html>
+
+
+
+
+
