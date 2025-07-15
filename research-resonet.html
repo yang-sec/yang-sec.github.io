@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>SDSL Research - RESONET</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/sdsl-icon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171741102-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-171741102-1');
+    </script>
+</head>
+
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large" style="background-color:#0033A0;color:white">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="https://www.uky.edu/" class="w3-bar-item w3-padding-small"><img class="w3-center" src="media/uk-lockup-white.png" style="width:164px; height:48px; " align="middle"></a>
+        <a href="opening.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Opening</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Members</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Teaching</a>
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Publication</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Research</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">SDSL Home</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large">SDSL Home</a>    
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large">Research</a>
+        <a href="publication.html" class="w3-bar-item w3-button w3-padding-large">Publication</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>    
+        <a href="opening.html" class="w3-bar-item w3-button w3-padding-large">Opening</a>
+    </div>
+    
+</div>
+
+<div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+    <h3><p class="pmargin w3-center"><b>CAREER: Foundations of Operational Resilience and Secure Communication for Networked Real-Time Systems</b></p></h3>
+
+    <h6><p class="pmargin">
+                Real-time systems underpin applications that require timely responses to sensor data, and emerging scenarios, such as autonomous vehicles and industrial automation, demand precise coordination among multiple such systems. However, coordinated real-time applications still face significant safety risks due to faulty, even compromised, components and the volatility of inter-system communication. The project’s novelties center on developing foundational principles that enable multiple real-time systems to carry out coordinated operations correctly and safely with timeliness guarantees even under attacks and volatile communication conditions. The project's broader significance and importance lie in its real-time coordination principles and security mechanisms that can be extended to general security-critical daily applications. This project also strengthens the nation’s workforce in network and computer system security through integrated educational activities catered to students in higher education and the public.
+
+                This project aims to develop a novel architecture called RESONET to enable multiple real-time systems to perform coordinated operations with strong fault tolerance and real-time guarantees. The research is organized into three complementary thrusts. The first thrust focuses on foundational cross-system fault tolerance principles, ensuring coordinated operations meet timeliness requirements even in the face of component failures. It adopts a layered consensus-based approach enhanced by reinforcement learning that dynamically adapts the consensus parameters to network conditions. The second thrust provides a secure communication layer necessary for the above consensus-based approach by designing lightweight, group authentication and key establishment protocols to secure both intra- and inter-system communications among system components. The third thrust provides the last line of defense for individual systems by developing an intrusion detection mechanism that detects system intrusions and failures and forecasts imminent timing violations. The project builds a drone fleet and an automotive communication network to support the validation of developed prototypes and to serve as platforms for hands-on educational activities. All research outcomes and educational materials, including tutorials, presentations, publications, and open-source software, will be made publicly available online.
+            </p></h6>
+
+    
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+</body>
+</html>
