@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>CS270 F26</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/sdsl-icon.png">
+<style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+    p.pmargin
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    a.anchor{
+        display: block;
+        content ="";
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+    }
+
+    div.sfix
+    {
+        content: " ";
+    }
+</style>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171741102-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-171741102-1');
+    </script>
+</head>
+
+<body>
+<!-- top bar -->
+<div class="w3-top">
+
+    <div class="w3-row w3-large" style="background-color:#0033A0;color:white">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="https://engr.uky.edu/people/yang-xiao" class="w3-bar-item w3-padding-small"><img class="w3-center" src="../../media/uk-lockup-white.png" style="width:164px; height:48px; " align="middle"></a>
+        <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Yang Xiao Home</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-large">
+        <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large">Yang Xiao Home</a>    
+    </div>
+
+</div>
+
+<div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px">
+<!--     <div class ='w3-center w3-padding-32'>
+        <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+    </div> -->
+
+
+    <h2> <p class="pmargin w3-text-indigo w3-center"> CS 270 (Fall 2026)<br>Systems Programming</p></h2>
+
+    <h4><p class="pmargin w3-text-indigo">Course Information</p></h4>
+    <h6><p class="pmargin">
+        <b>Instructor:</b> <a href="../../index.html" style="color:blue">Yang Xiao</a> (contact: xiaoy[AT]uky.edu)
+        <br><b>Meeting Times:</b> T/R 3:30-4:45 PM
+        <br><b>Office Hour:</b> Hardymon Rm 233, Wed 2:00 PM – 4:00 PM
+        <br><b>TA:</b> TBD, Office Hour: TBD, EE Annex 205
+    </p></h6>
+
+
+    <h4><p class="pmargin w3-text-indigo">Course Description</p></h4>
+    <h6><p class="pmargin">
+        This course provides an introduction to computer systems and explores computer architecture, operating systems, and networks from a programmer's perspective. The course also introduces advanced programming and debugging tools. Topics include hardware instruction sets, machine language and C language program representations, linking/loading, operating systems (process management, scheduling, memory management, interprocess communication, and file systems), network programming (socket programming and web protocols), and common security attacks and solutions.
+    </p></h6>
+    
+
+    <h4><p class="pmargin w3-text-indigo">Textbooks and Materials</p></h4>
+    <h6><p class="pmargin">
+        <b>Required Textbook:</b> R. Bryant and D. O'Hallaron, <em>Computer Systems: A Programmer's Perspective</em>, third edition, Pearson, 2016. ISBN 978-0-13-409266-9.
+
+        <br>
+        <b>Strongly Recommended Textbook:</b> B. Kernighan and D. Ritchie, <em>The C Programming Language</em>, second edition, Prentice Hall, 1988. ISBN 0-13-110362-8. Why this text is strongly recommended: It is both (i) the best way to learn C language; and (ii) a great reference for the future.  Why C language is important (at least for this course): Because C is the closest high-level language to machine language—It is designed so that you can know exactly what the machine is doing when it executes your programs.
+
+    </p></h6>
+
+
+    <h4><p class="pmargin w3-text-indigo">Course Schedule (Tentative)</p></h4>
+
+    <style>
+    .classtable {
+        border:1px solid #C0C0C0;
+        border-collapse:collapse;
+        padding:5px;
+    }
+    .classtable th {
+        border:1px solid #C0C0C0;
+        padding:5px;
+        background:#F0F0F0;
+    }
+    .classtable td {
+        border:1px solid #C0C0C0;
+        padding:5px;
+    }
+    .classtable {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    </style>
+
+    <table class="pmargin classtable">
+        <!-- <caption>Table 1</caption> -->
+        <col width="10px" />
+        <col width="75px" />
+        <col width="450px" />
+        <col width="110px" />
+        <col width="270px" />
+        <thead>
+        <tr>
+            <th>Week</th>
+            <th>Date</th>
+            <th>Agenda <br>(Lecture notes uploaded to Canvas the same day before class)</th>
+            <th>Text Reading</th>
+            <th>Assignment <br>(H: Homework, L: Lab, P: Project)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td> 
+                08/25 T<br>
+                08/27 R<br>
+            </td>
+            <td> 
+                <!-- Lec 0: Syllabus and course content overview <br> -->
+                <!-- Lec 1: Intro to C: Portable Assembly Language <br> -->
+                <!-- <b>Lab 0: </b>Your VM, the shell, basic C tool chain, gdb -->
+            </td>
+            <td>
+                <!-- 1<br> -->
+                <!-- 2-2.2<br> -->
+                <!-- 2-2.2 -->
+            </td>
+            <td>
+                <!-- H0 (survey) out; P0 out (Thu)<br> -->
+                <!-- L0 out - due Sat<br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                09/01 T<br>
+                09/03 R<br>
+            </td>
+            <td>
+                <!-- <b>Labor Day - no class</b><br> -->
+                <!-- Lec 2: bit-diddling in C/C++<br> -->
+                <!-- Lec 3: Integers and Two's Complement<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- N0 (sppl.), 2.3<br> -->
+                <!-- N0 (sppl.)<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- H0 due, H1 out (Thu)<br> -->
+                <!-- <br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                09/08 T<br>
+                09/10 R<br>
+            </td>
+            <td>
+                <!-- Lec 4: Intro to x86-64 - machine state<br> -->
+                <!-- Lec 5: x86-64 - basic instructions & operand modes<br> -->
+                <!-- <b>Lab 1: Understanding a Program W/o Source Code</b><br>  -->
+                <!-- <em>(Yang is in travel; watch pre-recorded video at your own pace)</em><br> -->
+            </td>
+            <td>
+                <!-- 3-3.3<br> -->
+                <!-- 3.4-3.5<br> -->
+                <!-- 3.10<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- H1 due; P0 due (Thu); H2 out (Thu)<br> -->
+                <!-- L1 out - due Sat; P1 out<br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+                09/15 R<br>
+                09/17 T<br>
+            </td>
+            <td>
+                <!-- Lec 6: x86-64 - control flow instructions<br> -->
+                <!-- Catch-up (focus on code examples) <br>  -->
+                <!-- Lec 7: x86-64 - procedure call and linkage<br> -->
+            </td>
+            <td>
+                <!-- 3.6<br> -->
+                <!-- <br>  -->
+                <!-- 3.7<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- H2 due; <br> -->
+                <!-- H3 out<br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>
+                09/22 T<br>
+                09/24 R<br>
+            </td>
+            <td>
+                <!-- Catch-up<br> -->
+                <!-- Catch-up & Lec 8a: Data structures in C <br> -->
+                <!-- Lec 8b: Implementing arrays/structs in memory<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- <br> -->
+                <!-- 3.8-3.9<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- <br> -->
+                <!-- H3 due; H4 out<br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>
+                09/29 T<br>
+                10/01 R<br>
+            </td>
+            <td>
+                <!-- Catch-up <br> -->
+                <!-- Lec 9: Buffer overflows & countermeasures <br>  -->
+                <!-- <b>Lab 2: Buffer Overflows</b><br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- 3.10<br> -->
+                <!-- <br> -->
+            </td>
+            <td>
+                <!-- P1 due;<br> -->
+                <!-- <br> -->
+                <!-- H4 due; P2 out; L2 out - due Sat<br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>
+                10/06 T<br>
+                10/08 R<br>
+            </td>
+            <td>
+                <!-- Catch-up & Lec 10: Explicit memory allocation: <b>malloc</b><br> -->
+                <!-- Lec 11: Linking and ELF file format <br> -->
+                <!-- Lec 12: Intro to hardware architecture & Y86-64 <br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- 7.1-7.5<br> -->
+                <!-- 4.1-4.2<br>  -->
+            </td>
+            <td>
+                <!-- H5 out<br> -->
+                <!-- <br>  -->
+                <!-- <br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>
+                10/13 T<br>
+                10/15 R<br>
+            </td>
+            <td>
+                <!-- Midterm study guide<br> -->
+                <!-- <b>Midterm Exam</b> in class<br> -->
+                <!-- Lec 13: Sequential Y86-64 implementation<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- <br>  -->
+                <!-- 4.3<br> -->
+            </td>
+            <td>
+                <!-- H5 due<br> -->
+                <!-- H6 out<br> -->
+                <!-- <br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>
+                10/20 T<br>
+                10/22 R<br>
+            </td>
+            <td>
+                <!-- Lec 14: Pipelined Y86-64 implementation<br> -->
+                <!-- Catch-up & midterm problems walk-thru & Proj 2 hints<br>  -->
+                <!-- Lec 15: Intro to caching & locality<br> -->
+            </td>
+            <td>
+                <!-- 4.5-4.6<br> -->
+                <!-- <br> -->
+                <!-- 6.1-6.3<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- P2 due<br>  -->
+                <!-- H6 due <br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>
+                10/27 T<br>
+                10/29 R<br>
+            </td>
+            <td>
+                <!-- <b>Fall Break - no class</b><br> -->
+                <!-- Lec 16: Hardware cache operations<br> -->
+                <!-- Lec 17: Exceptional control flow & processes<br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- 6.4-6.5<br> -->
+                <!-- 8.1-8.2<br> -->
+            </td>
+            <td>
+                <!-- P3 out; H7 out (Tue) <br> -->
+                <!-- <br> -->
+                <!-- <br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>
+                11/03 T<br>
+                11/05 R<br>
+            </td>
+            <td>
+                <!-- Lec 18: Process lifecycle - Part 1 (basics)<br> -->
+                <!-- Lec 19: Process lifecycle - Part 2 (APIs) <br>  -->
+                <!-- Lec 20: Interprocess communication w/signals & <b>Lab 3: Signals and Race Conditions</b><br> -->
+            </td>
+            <td>
+                <!-- 8.3-8.4.2<br> -->
+                <!-- 8.4.3-8.4.6<br> -->
+                <!-- 8.5<br> -->
+            </td>
+            <td>
+                <!-- H7 due (Tue)<br> -->
+                <!-- H8 out <br>  -->
+                <!-- L3 out - due Sat<br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>
+                11/10 T<br>
+                11/12 R<br>
+            </td>
+            <td>
+                <!-- Catch-up (Lec 19, 20) & Proj 3 hints<br> -->
+                <!-- Lec 21: Intro to virtual memory<br>  -->
+                <!-- Lec 22: Address translation<br> -->
+            <td>
+                <!-- <br> -->
+                <!-- 9.1-9.5<br> -->
+                <!-- 9.6<br> -->
+            </td>
+            <td>
+                <!-- H8 due (Tue)<br> -->
+                <!-- <br> -->
+                <!-- H9 out; P3 due<br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>
+                11/17 T<br>
+                11/19 R<br>
+                <br>
+            </td>
+            <td>
+                <!-- Lec 23: File systems concepts & I/O<br> -->
+                <!-- Lec 24: File sharing & IPC w/ pipes<br> -->
+                <!-- <b>Lab 4: Working with Files</b><br> -->
+                <!-- <em>(Yang is in travel; watch pre-recorded video at your own pace)</em><br> -->
+            </td>
+            <td>
+                <!-- 10.1-10.5<br> -->
+                <!-- 10.6-10.7<br> -->
+                <!-- <br> -->
+                <!-- <br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- P4 out; H9 due (Thu)<br>  -->
+                <!-- L4 out - due Sat;  H10 out<br> -->
+                <!-- <br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>
+                11/24 T<br>
+                11/26 R<br>
+            </td>
+            <td>
+                <!-- Lec 25: Concurrent programming w/ threads (vs processes)<br> -->
+                <!-- <b>Thanksgiving Break - no class</b><br> -->
+                <!-- <b>Thanksgiving Break - no class</b><br> -->
+            </td>
+            <td>
+                <!-- 12.1, 12.3<br> -->
+                <!-- <br> -->
+                <!-- <br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- <br>  -->
+                <!-- <br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>
+                12/01 T<br>
+                12/03 R<br>
+            </td>
+            <td>
+                <!-- Lec 26: Thread synchronization and races <br> -->
+                <!-- Lec 27: Thread programming <br>  -->
+                <!-- Catch-up & <b>Lab 5: Solving a Programming Problem with Threads</b> (this lab is ungraded & informational only)<br> -->
+            </td>
+            <td>
+                <!-- 12.5<br> -->
+                <!-- 12.4, 12.7<br> -->
+                <!-- <br> -->
+            </td>
+            <td>
+                <!-- <br> -->
+                <!-- H11 out (ungraded & informational) <br>  -->
+                <!-- P4 due<br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>
+                12/08 T<br>
+                12/10 R<br>
+            </td>
+            <td>
+                <!-- (Prep Days) Performance considerations & other system topics<br> -->
+                <!-- (Prep Days) Final Exam Review<br> -->
+                <!-- <b>No class</b> -->
+            </td>
+            <td></td>
+            <td>
+                <!-- H10 due (12/7, Sun)<br> -->
+                <!-- <br> -->
+                <!-- <br> -->
+            </td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>
+                12/15 T<br>
+                12/17 R<br>
+            </td>
+            <td>
+                <b>Final exam, Tuesday, December 15, 1:00 - 3:00 PM, in classroom</b><br>
+                <br>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tbody>
+    </table>
+    
+    
+
+
+
+    <h4><p class="pmargin w3-text-indigo">Learning/Research Resources</p></h4>
+    <h6><p class="pmargin">
+        <a href="https://libraries.uky.edu/" style="color:blue">UK Libraries</a>, 
+        <a href="https://www.uky.edu/studentacademicsupport/free-tutoring-and-coaching-resources" style="color:blue">Free Tutoring and Coaching at UK</a>, 
+        <a href="https://scholar.google.com/" style="color:blue">Google Scholar</a>,
+        <a href="https://dl.acm.org/" style="color:blue">ACM Digital Library</a>,
+        <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" style="color:blue">IEEE Xplore</a>.
+    </p></h6>
+
+</div>
+
+<!-- <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ -->
+<script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+</script>
+
+</body>
+</html>
