@@ -98,6 +98,126 @@
     <h6><p class="pmargin">
         The project's potential broader impact relate to security-critical daily applications, potentially transforming how real-time systems are deployed and managed in critical transportation and industrial automation infrastructure. The project will also strengthen the nation’s workforce in network and computer system security through integrated educational activities catered to students in higher education and the public.
     <br><br>
+
+
+    <h3><p class="pmargin w3-text-indigo">Research Results</p></h4>
+    <h6><p class="pmargin"></p></h6> 
+    <!-- <div class="w3-content" style="max-width:1080px;margin-top:100px;margin-bottom:80px"> -->
+        <!--     <div class ='w3-center w3-padding-32'>
+                <span class="w3-xxlarge w3-center w3-bottombar w3-border-dark-grey w3-padding-16">Publications</span>
+            </div> -->    
+            <!-- <hr> -->
+            <div class="w3-row">
+                <div class="w3-half">
+                <center>
+                    <p class="pmargin">
+                    <img class="w3-center" src="media/pact-sys-workflow.png" style="width:390px; height:220; " align="middle">
+                    </p>
+                </center>
+                </div>
+        
+                <div class="longColumn">
+                    <h4><p class="pmargin w3-text-indigo">
+                    PACT - Fault-tolerant Collaborative Real-time Control
+                    </p></h4>
+                    <h6><p class="pmargin">
+                        PACT tackles the problem of getting multiple autonomous real-time systems (vehicles or drones) to react together in real time when some components might be faulty. Today, each vehicle can already use redundant onboard processors to tolerate faults internally (I-SMR), but extending this to coordination across vehicles is hard because wireless links are unreliable and different vehicles sense events differently.
+
+                        <br><br>
+                        PACT's solution has three parts. First, it frames the problem into three timing regimes: the local fault-tolerant step can't finish in time, only the local fallback is ready, or both local and global coordination finish before the deadline. Second, it builds a global replication layer (G-SMR) on top of each vehicle's local one. When a vehicle detects an event, it certifies the detection locally, then broadcasts it with cryptographic endorsements. Receiving vehicles validate, repair if needed, and record the input in a consistent global order. A key property is that this repair process can't cause honest processors to record conflicting inputs. Third, a statistical deadline predictor decides whether to even attempt global coordination — if it's unlikely to finish in time, vehicles just use their local fallback.
+
+                        <br><br>
+                        Evaluation on truck platooning and conflict-zone access control shows warnings arrive well before local detection, with sub-3% deadline miss rates at 16 nodes.    
+                    </p></h6>
+                </div>  
+            </div>
+
+            <hr>    
+
+            <div class="w3-row">
+                <div class="w3-half">
+                <center>
+                    <p class="pmargin">
+                    <img class="w3-center" src="media/hotswitch-model.png" style="width:350px; height:300px; " align="middle">
+                    </p>
+                </center>
+                </div>
+                <div class="longColumn">
+                    <h4><p class="pmargin w3-text-indigo">
+                    HotSwitch - Intelligent BFT Protocol Adaptation
+                    </p></h4>
+                    <h6><p class="pmargin">
+                        No single BFT consensus protocol works well under all network conditions. Leader-based protocols like HotStuff are fast when the network is stable but degrade badly when an attacker targets the leader with delays. Leaderless asynchronous protocols like FIN are resilient to such attacks but carry higher overhead when the network is fine.
+
+                        <br><br>
+                        HotSwitch solves this by letting the system switch between protocols on the fly. It has two main parts. First, a protocol switch layer that piggybacks switching votes onto the existing consensus messages — so nodes can agree on which protocol to run next without needing a separate consensus round. A switch happens when 2f+1 nodes vote for the same target protocol within a time window. This keeps switching cheap and safe. Second, a reinforcement learning module (DQN) at each node that observes throughput, latency, and network delays to propose which protocol to switch to. Nodes synchronize their metrics through the consensus layer so their RL agents train on the same data.
+
+                        <br><br>
+                        Experiments on 10 nodes show HotSwitch matches HotStuff's performance under stable conditions and switches to FIN under adversarial delays, reducing latency by up to 80% compared to BFTBrain, the closest prior work, which lacks asynchronous protocol support and uses a throughput-only reward signal.
+                    </p></h6>
+                </center>
+                </div>  
+            </div>
+
+            <hr>
+
+            <div class="w3-row">
+                <div class="w3-half">
+                <center>
+                    <p class="pmargin">
+                    <img class="w3-center" src="media/dflc-model-diff.png" style="width:400px; height:180px; " align="middle">
+                    </p>
+                </center>
+                </div>
+                <div class="longColumn">
+                    <h4><p class="pmargin w3-text-indigo">
+                    DFL-C - Model-Consistent Byzantine-resilient Decentralized Federated Learning
+                    </p></h4>
+                    <h6><p class="pmargin">
+                        Standard decentralized FL lets nodes only aggregate updates from neighbors, causing models to diverge across the network. This is dangerous for missions needing uniform decisions. It also makes Byzantine attacks easier — adversaries can equivocate (send different updates to different peers) and dominate a victim's local neighborhood even while being a minority overall.
+
+                        <br><br>
+                        DFL-C solves this by inserting an asynchronous common subset (ACS) consensus protocol into each training round. All honest nodes agree on the same set of at least N−F model updates, then aggregate deterministically to produce an identical global model. Equivocation is blocked naturally since ACS's reliable broadcast detects conflicting proposals. A dual-domain trust scoring scheme further penalizes nodes for consensus misbehavior (equivocation, non-responsiveness) and poor update quality (spatial outliers, temporal instability), while also accelerating consensus by prioritizing trusted nodes' proposals.
+
+                        <br><br>
+                        Experiments on 4–13 nodes show DFL-C matches centralized FL accuracy, beats the state-of-the-art BALANCE — especially under non-IID data with Byzantine nodes — and adds moderate consensus overhead relative to training time.
+                    </p></h6>
+                </center>
+                </div>  
+            </div>
+
+            <hr>
+
+            <ul>
+                <li>Y. Li, S. Bhujel, C. Lira, N. Wang, Y. Xiao. "Model-Consistent Byzantine-Resilient Decentralized Federated Learning for Collaborative Missions." IEEE Conference on Communications and Network Security 2026 (CNS'26), September 2026.</li>
+             </ul>    
+    </h3>
+
+    <h3><p class="pmargin w3-text-indigo">Textbed Development</p></h4>
+    <h6><p class="pmargin"></p></h6> 
+        <div class="w3-row">
+        <div class="w3-half">
+        <center>
+            <p class="pmargin">
+            <img class="w3-center" src="media/drone-testbed-diagram.png" style="width:300px; height:300; " align="middle">
+            </p>
+        </center>
+        </div>
+
+        <div class="longColumn">
+            <h4><p class="pmargin w3-text-indigo">
+            Drone Swarm Software-in-the-Loop Testbed
+            </p></h4>
+            <h6><p class="pmargin">
+                This is our initial Software-in-the-Loop (SITL) testbed for drone swarm research in ad hoc UAV disaster detection missions. Built on Unreal Engine and AirSim, it models disaster scenarios (e.g., fires) where multiple simulated drones perform classification and consensus over a decentralized network. Each drone runs a UDP network program and a Python control program on top of a simulated flight controller (ArduPilot), while drone camera images are generated from the Unreal Engine environment. This testbed was mainly built and tested by undergraduate researcher Cameron Lira. (<a href="https://github.com/mac799l/drone-swarm-simulation">Repository link</a>)  
+            </p></h6>
+        </div>  
+        </div>
+    </h6>
+    </h3>
+
+
+
     <h3><p class="pmargin w3-text-indigo">Acknowledgment</p></h3>
 
     <h6>
